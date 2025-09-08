@@ -1,0 +1,89 @@
+main:
+    task_dirs: ["few_shot_n2c2_2018_tasks"]
+
+ABDOMINAL:
+    few_shot: true
+    reset_every_sentence: false
+    resources:
+        abdominal_list_file: 'resources/abdominal-surgery-list.txt'
+
+ADVANCED-CAD:
+    few_shot: false
+
+ALCOHOL-ABUSE:
+    resources:
+        alcohol_file: 'resources/alcohol-list.txt'
+    few_shot: true
+    reset_every_sentence: false
+
+ASP-FOR-MI:
+    resources:
+        aspirin_file: 'resources/aspirin-list.txt'
+    few_shot: true
+    reset_every_sentence: false
+
+CREATININE:
+    few_shot: true
+
+DIETSUPP-2MOS:
+    resources:
+        DLSD_file: 'resources/dietsupp-list.txt'
+    reset_every_sentence: true
+    few_shot: true
+
+DRUG-ABUSE:
+    reset_every_sentence: false
+    few_shot: true
+
+ENGLISH:
+    reset_every_sentence: true
+    few_shot: true
+
+HBA1C:
+    few_shot: true
+
+MAJOR-DIABETES:
+    few_shot: false
+
+MAKES-DECISIONS:
+    few_shot: true
+
+MI-6MOS:
+    few_shot: true
+    
+retrieval:
+        method: 'OVERLAP'
+        lowercase: true
+        use_cuda: false
+        OVERLAP:
+            distance_type: 'cosine'
+            embedding_type: 'fasttext'
+        EMD:
+            distance_type: 'cosine'
+            embedding_type: 'fasttext'
+    
+general:
+    resources:
+        section_titles: 'resources/n2c2_sections_subpart.txt'
+    train: 
+        dir: 'data/n2c2_2018_data/release/train'
+        files: ['272.xml','392.xml','258.xml','132.xml','127.xml','170.xml','331.xml','247.xml','389.xml','393.xml','280.xml','378.xml','204.xml','186.xml','142.xml','330.xml','177.xml','168.xml','160.xml','169.xml','163.xml','113.xml','124.xml','358.xml','273.xml','381.xml','206.xml','363.xml','176.xml','316.xml','100.xml','338.xml','292.xml','318.xml','250.xml','154.xml','181.xml','241.xml','126.xml','388.xml','382.xml','242.xml','264.xml','185.xml','161.xml','203.xml','222.xml','283.xml','332.xml','288.xml','105.xml','357.xml','365.xml','337.xml','271.xml','107.xml','397.xml','354.xml','187.xml','315.xml','209.xml','109.xml','244.xml','253.xml','183.xml','104.xml','367.xml','355.xml','221.xml','174.xml','284.xml','307.xml','195.xml','377.xml','334.xml','191.xml','147.xml','319.xml','117.xml','371.xml','299.xml','102.xml','138.xml','225.xml','215.xml','235.xml','110.xml','252.xml','349.xml','136.xml','106.xml','339.xml','238.xml','325.xml','112.xml','210.xml','341.xml','243.xml','286.xml','121.xml','356.xml','300.xml','237.xml','207.xml','228.xml','335.xml','255.xml','179.xml','306.xml','226.xml','223.xml','202.xml','278.xml','364.xml','297.xml','101.xml','148.xml','260.xml','262.xml','248.xml','129.xml','189.xml']
+    val: 
+        dir: 'data/n2c2_2018_data/release/train'
+        files: ['162.xml','180.xml','116.xml','324.xml','313.xml','340.xml','128.xml','172.xml','398.xml','387.xml','263.xml','114.xml','304.xml','134.xml','152.xml','329.xml','234.xml','345.xml','281.xml','123.xml','159.xml','257.xml','144.xml','290.xml','139.xml','326.xml','308.xml','111.xml','391.xml','333.xml','208.xml','164.xml','311.xml','310.xml','366.xml','301.xml','125.xml','259.xml','267.xml','219.xml','279.xml','302.xml','298.xml','385.xml','375.xml','214.xml','122.xml','380.xml','231.xml','220.xml','256.xml','372.xml','287.xml','376.xml','151.xml','146.xml','184.xml','212.xml','145.xml','149.xml','344.xml','200.xml','291.xml','211.xml','268.xml','175.xml','188.xml','130.xml','289.xml','303.xml','157.xml','254.xml','150.xml','249.xml','312.xml','362.xml','395.xml','230.xml','103.xml','295.xml']
+    test:
+        dir: 'data/n2c2_2018_data/release/n2c2-t1_gold_standard_test_data/test'
+
+device:
+    device: "cuda"
+    num_gpus:  1
+    load_8bit: true
+
+generation:
+    model_path: "lmsys/vicuna-13b-v1.5"
+    temperature: 0
+    repetition_penalty: 1.0
+    max_new_tokens: 256
+    judge_sent_end: false
+    echo: false
+

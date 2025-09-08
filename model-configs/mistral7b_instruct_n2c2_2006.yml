@@ -1,0 +1,52 @@
+main:
+    task_dirs: ["few_shot_n2c2_2006_tasks"]
+
+ALL-SMOKER-CLASSES:
+    few_shot: true
+    
+retrieval:
+        # Available methods: DPR, EMD (Wassertein distance), OVERLAP
+        method: 'OVERLAP'
+        # Words must be lowercased before retrieval
+        lowercase: true
+        # Use cuda if available
+        use_cuda: false
+        # Method-specific config
+        OVERLAP:
+            distance_type: 'cosine'
+            embedding_type: 'fasttext'
+        EMD:
+            distance_type: 'cosine'
+            embedding_type: 'fasttext'
+    
+general:
+    resources:
+        section_titles: 'resources/n2c2_sections_subpart.txt'
+    original_train: 
+        dir: 'data/n2c2_2006_data'
+        files: ['smokers_surrogate_train_all_version2.xml']
+    train: 
+        dir: 'data/n2c2_2006_data'
+        files: ['n2c2_2006_train_expanded.csv']
+    val: 
+        dir: 'data/n2c2_2006_data'
+        files: ['n2c2_2006_val_expanded.csv']
+    original_test: 
+        dir: 'data/n2c2_2006_data'
+        files: ['smokers_surrogate_test_all_groundtruth_version2.xml']
+    test:
+        dir: 'data/n2c2_2006_data'
+        files: ['n2c2_2006_test_expanded.csv']
+
+device:
+    device: "cuda"
+    num_gpus:  1
+    load_8bit: true
+
+generation:
+    model_path: "mistralai/Mistral-7B-Instruct-v0.1"
+    temperature: 0
+    repetition_penalty: 1.0
+    max_new_tokens: 256
+    judge_sent_end: false
+    echo: false

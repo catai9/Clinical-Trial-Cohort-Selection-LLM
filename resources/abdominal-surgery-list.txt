@@ -1,0 +1,12 @@
+abdominal
+resection
+polypectomy
+bowel
+intestine
+hysterectomy
+cholecystectomy
+appendectomy
+nephrectomy
+colostomy
+myomectomy
+prostatectomy

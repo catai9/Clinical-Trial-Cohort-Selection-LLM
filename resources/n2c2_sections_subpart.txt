@@ -1,0 +1,142 @@
+_________________________
+PHYSICAL EXAMINATION:
+HPI:
+MEDICATIONS:
+ALLERGIES:
+Medications
+PAST MEDICAL HISTORY:
+HISTORY OF PRESENT ILLNESS:
+Allergies
+Problems
+General:
+Medications:
+PMH:
+REVIEW OF SYSTEMS:
+SOCIAL HISTORY:
+HTN
+Dictated By:
+Impression:
+Plan:
+Physical Exam
+PCP:
+Signed electronically by
+SH:
+Social History:
+Dictated by:
+Vital Signs
+DISPOSITION (including condition upon discharge):
+Attending:
+FAMILY HISTORY:
+HISTORY OF PRESENTING COMPLAINT:
+home medications
+ASSESSMENT AND PLAN:
+Labs:
+Labs
+LABORATORY EVALUATION:
+CXR:
+Sincerely
+FINAL DIAGNOSIS:
+Physical examination:
+Family History:
+Exam:
+Physical Exam:
+Review of Systems:
+Past Medical History:
+Review of Systems
+Extr:
+Date of Admission:
+LABORATORY DATA:
+PHYSICAL EXAM:
+Meds:
+PLAN:
+CHIEF COMPLAINT:
+NEURO:
+Patient:
+Document Status:
+Date:
+Physical Examination:
+Social History
+History of Present Illnes
+DISPOSITION:
+ALL:
+PAST SURGICAL HISTORY:
+GU:
+History of Present Illness:
+Past Medical History
+PRESENTING COMPLAINT:
+LABS:
+SOCIAL HISTORY AND FAMILY HISTORY:
+Assessment:
+Family History
+EMERGENCY DEPARTMENT COURSE:
+All:
+Date of Visit:
+Selected recent labs:
+Vitals:
+Physical examination
+PATIENT:
+Major Problems
+Chief Complaint
+Reason for Visit
+Social history:
+Plan
+Assessment and Plan
+Source:
+Assessment and Plan:
+Chief Complaint:
+PHYSICAL EXAM
+HPI
+PMHx:
+VITALS:
+DIAGNOSIS:
+SOCIAL HISTORY
+Past Surgical History:
+Imaging:
+Recommendations:
+IMPRESSION AND PLAN:
+ADMIT DATE:
+Habits:
+Active Medications
+Habits
+PRIMARY DIAGNOSIS:
+Exam
+Reason for visit:
+Results
+Assessment
+Review of systems:
+Family history:
+PROBLEMS:
+Narrative History
+Pt:
+Assessment/Plan:
+Vital signs
+HISTORY:
+Assessment and plan:
+Current Medications:
+Date of admission:
+Social history
+Reason for visit
+Physical Examination
+General Appearance
+GENERAL:
+FHx:
+PMH/PSH:
+Procedure:
+Transcribed by:
+Assessment and plan
+REASON FOR VISIT:
+MEDICATIONS ON ADMISSION:
+Family Hx:
+Coord:
+IMAGING STUDIES:
+Past medical history:
+CONTACT:
+FAMILY HISTORY
+Family history
+Medical Record Number:
+history
+Admit Date:
+Admission Note
+Reason for consult:
+Past Surgical History
+Reflexes:

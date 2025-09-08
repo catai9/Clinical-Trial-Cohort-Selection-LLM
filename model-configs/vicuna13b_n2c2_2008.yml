@@ -1,0 +1,140 @@
+main:
+    task_dirs: ["few_shot_n2c2_2008_tasks"]
+
+intuitive_Asthma:
+    few_shot: true
+
+intuitive_CAD:
+    few_shot: true
+
+intuitive_CHF:
+    few_shot: true
+    
+intuitive_Depression:
+    few_shot: true
+    
+intuitive_Diabetes:
+    few_shot: true
+
+intuitive_Gallstones:
+    few_shot: true
+
+intuitive_GERD:
+    few_shot: true
+
+intuitive_Gout:
+    few_shot: true
+
+intuitive_Hypertension:
+    few_shot: true
+    
+intuitive_Hypercholesterolemia:
+    few_shot: true
+
+intuitive_Hypertriglyceridemia:
+    few_shot: true
+
+intuitive_OA:
+    few_shot: true
+
+intuitive_Obesity:
+    few_shot: true
+    
+intuitive_OSA:
+    few_shot: true
+    
+intuitive_PVD:
+    few_shot: true
+
+intuitive_Venous Insufficiency:
+    few_shot: true
+    
+textual_Asthma:
+    few_shot: true
+    
+textual_CAD:
+    few_shot: true
+    
+textual_CHF:
+    few_shot: true
+
+textual_Depression:
+    few_shot: true
+
+textual_Diabetes:
+    few_shot: true
+
+textual_Gallstones:
+    few_shot: true
+
+textual_GERD:
+    few_shot: true
+    
+textual_Gout:
+    few_shot: true
+    
+textual_Hypertension:
+    few_shot: true
+    
+textual_Hypercholesterolemia:
+    few_shot: true
+    
+textual_Hypertriglyceridemia:
+    few_shot: true
+
+textual_OA:
+    few_shot: true
+
+textual_Obesity:
+    few_shot: true
+    
+textual_OSA:
+    few_shot: true
+    
+textual_PVD:
+    few_shot: true
+    
+textual_Venous Insufficiency:
+    few_shot: true
+        
+retrieval:
+        # Available methods: DPR, EMD (Wassertein distance), OVERLAP
+        method: 'OVERLAP'
+        # Words must be lowercased before retrieval
+        lowercase: true
+        # Use cuda if available
+        use_cuda: false
+        # Method-specific config
+        OVERLAP:
+            distance_type: 'cosine'
+            embedding_type: 'fasttext'
+        EMD:
+            distance_type: 'cosine'
+            embedding_type: 'fasttext'
+    
+general:
+    resources:
+        section_titles: 'resources/n2c2_sections_subpart.txt'
+    train: 
+        dir: 'data/n2c2_2008_data'
+        files: ['n2c2_2008_train.csv']
+    val: 
+        dir: 'data/n2c2_2008_data'
+        files: ['n2c2_2008_val.csv']
+    test:
+        dir: 'data/n2c2_2008_data'
+        files: ['n2c2_2008_test.csv']
+
+device:
+    device: "cuda"
+    num_gpus:  1
+    load_8bit: true
+
+generation:
+    model_path: "lmsys/vicuna-13b-v1.5"   #   "lmsys/vicuna-7b-v1.3", "lmsys/vicuna-13b-v1.5", "tiiuae/falcon-7b-instruct"
+    temperature: 0
+    repetition_penalty: 1.0
+    max_new_tokens: 256
+    judge_sent_end: false
+    echo: false
+
